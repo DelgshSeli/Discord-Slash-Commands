@@ -1,2 +1,4 @@
 .env
 user_groups.json
+__pycache__/
+

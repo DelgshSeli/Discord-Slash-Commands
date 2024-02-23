@@ -9,7 +9,7 @@ def setup(bot):
     async def add_admin(interaction: discord.Interaction, user: discord.User):
         user_groups = load_user_groups()
 
-        if interaction.user.id in [413808058427244545, 388858312143405057]:
+        if interaction.user.id in user_groups["owners"]:
             if user.id not in user_groups["admins"]:
                 user_groups["admins"].append(user.id)
                 save_user_groups(user_groups)
